@@ -1,4 +1,6 @@
 ---
+import HeaderButton from "./HeaderButton.astro"
+
 console.log('javascript')
 ---
 
@@ -13,7 +15,63 @@ console.log('javascript')
   </div>
 
   <nav class="flex flex-col items-center justify-between w-full text-center md:flex-row">
-    <a class="text-white" href="/">Últimos lanzamientos</a>
-    <a class="text-white" href="/oldest">Los más viejos</a>
+    <HeaderButton class="text-white" href="/">
+      <svg 
+        slot="before"
+        width="24"
+        height="24"  
+        viewBox="0 0 24 24"  
+        fill="none"  
+        stroke="currentColor"  
+        stroke-width="2"  
+        stroke-linecap="round"  
+        stroke-linejoin="round"  
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
+        <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
+        <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+      </svg>
+      Últimos lanzamientos
+    </HeaderButton>
+    <HeaderButton class="text-white" href="/about">
+      <!-- Con slot estamos indicando en qué posición queremos que se coloque el icono utilizando slots nombrados -->
+      <svg
+        slot="before" 
+        width="24"  
+        height="24" 
+        viewBox="0 0 24 24" 
+        fill="none"  
+        stroke="currentColor"
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+      >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+          <path d="M12 9h.01" />
+          <path d="M11 12h1v4h1" />
+      </svg>
+      Sobre el proyecto
+    </HeaderButton>
+    <HeaderButton class="text-white" href="/oldest">
+      <svg 
+        slot="before"
+        width="24"
+        height="24"  
+        viewBox="0 0 24 24"  
+        fill="none"  
+        stroke="currentColor"  
+        stroke-width="2"  
+        stroke-linecap="round"  
+        stroke-linejoin="round"  
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M20.984 12.535a9 9 0 1 0 -8.431 8.448" />
+        <path d="M12 7v5l3 3" /><path d="M19 16v6" />
+        <path d="M22 19l-3 3l-3 -3" />
+      </svg>
+      Los más viejos
+    </HeaderButton>
   </nav>
 </header>
