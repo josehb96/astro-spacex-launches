@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro"
-import { getLatestLaunches, getLaunchById } from "../../services/spacex"
+// import { getLatestLaunches, getLaunchById } from "../../services/spacex"
+import { getLaunchById } from "../../services/spacex"
 
 const { id } = Astro.params
 
@@ -15,6 +16,7 @@ if (id) {
   launch = await getLaunchById({ id })
 }
 
+/*
 export async function getStaticPaths() {
   // llamar a una API externa para saber todas las ids que debes generar
 
@@ -24,11 +26,15 @@ export async function getStaticPaths() {
     params: { id: launch.id }
   }))
 }
-
+*/
 ---
 
 <Layout title={`Lanzamiento ${id}`}>
-  <article>
-    {launch?.id}
+  <article class="flex flex-col gap-y-4">
+    <img class="w-52 h-auto" src={launch?.links?.patch.small} alt={launch?.name} />
+    <h2 class="text-4xl text-white font-bold">
+      Launch #{launch?.flight_number}
+    </h2>
+    <p class="text-lg">{launch?.details}</p>
   </article>
 </Layout>
