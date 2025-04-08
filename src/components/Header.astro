@@ -1,5 +1,6 @@
 ---
 import HeaderButton from "./HeaderButton.astro"
+import Counter from "./Counter.vue"
 
 console.log('javascript')
 ---
@@ -13,6 +14,8 @@ console.log('javascript')
       All the information about SpaceX launches
     </p>
   </div>
+
+  <Counter client:visible/>
 
   <nav class="flex flex-col items-center justify-between w-full text-center md:flex-row">
     <HeaderButton href="/">
