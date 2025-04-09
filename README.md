@@ -31,7 +31,7 @@ Existen un montón de plantillas ya preparadas en la web de Astro,
 
 ## Estructura de carpetas
 
-![image.png](./public/assets/readme/image.png)
+![image.png](.github/assets/image.png)
 
 ## Sintaxis
 
@@ -162,7 +162,7 @@ Obviamente Astro ya tiene todo lo que sería fast refresh, hot mode replacement,
 
 Si hacemos npm run build y accedemos al directorio generado dist, veremos que no hay ningún archivo de JavaScript, ya que como hemos comentado anteriormente por defecto no utiliza JavaScript.
 
-![image.png](./public/assets/readme/image%201.png)
+![image.png](.github/assets/image%201.png)
 
 ## Sistema de Integración
 
@@ -198,9 +198,9 @@ console.log('javascript')
 
 De momento nuestra aplicación luce así:
 
-![image.png](./public/assets/readme/image%202.png)
+![image.png](.github/assets/image%202.png)
 
-![image.png](./public/assets/readme/image%203.png)
+![image.png](.github/assets/image%203.png)
 
 ## Enrutamiento de páginas / Layout
 
@@ -275,7 +275,7 @@ const { title } = Astro.props;
 
 ¡Ojo con esto! Que la propiedad color-scheme no te establece el color del texto.
 
-![image.png](./public/assets/readme/image%204.png)
+![image.png](.github/assets/image%204.png)
 
 ## Slots (nombrados, text by default)
 
@@ -393,7 +393,7 @@ console.log('javascript')
 </header>
 ```
 
-![image.png](./public/assets/readme/image%205.png)
+![image.png](.github/assets/image%205.png)
 
 Una cosa que debemos saber de los slots es el tema del contenido por defecto, imáginate que por lo que sea el slot no recibe nada y queremos tener un valor por defecto, para ello lo que podemos hacer es poner un texto por defecto, o html o un componente ahí, o lo que tú quieras, entonces lo que va a hacer esto es que en caso de no le pasemos un slot:
 
@@ -414,11 +414,11 @@ hover:opacity-100">
 
 Header.astro donde hemos quitado el texto que estába en la zona marcada en rojo al último HeaderButton:
 
-![image.png](./public/assets/readme/image%206.png)
+![image.png](.github/assets/image%206.png)
 
 Resultado:
 
-![image.png](./public/assets/readme/image%207.png)
+![image.png](.github/assets/image%207.png)
 
 <aside>
 💡
@@ -474,7 +474,7 @@ Cremos un archivo ejemplo.html dentro del directorio pages:
 </h1>
 ```
 
-![image.png](./public/assets/readme/image%208.png)
+![image.png](.github/assets/image%208.png)
 
 ## Fetching de Datos / Iteración de elementos
 
@@ -523,7 +523,7 @@ Vamos a usar quicktype para tener tipado en el json para cuando accedamos a los 
 
 Para ello nos copiamos la salida por terminal del console.log(data), nos vamos a quicktype y le decimos que lo pase a TypeScript con las 3 opciones que he marcado:
 
-![image.png](./public/assets/readme/image%209.png)
+![image.png](.github/assets/image%209.png)
 
 Nos copiamos el código haciendo click en “Copy Code” y lo pasamos a un nuevo archivo llamado “api.ts” dentro un directorio nuevo en src llamado “types”:
 
@@ -726,7 +726,7 @@ const { docs: launches } = (await res.json()) as APISpaceXResponse;
 
 Estado actual de la aplicación:
 
-![image.png](./public/assets/readme/image%2010.png)
+![image.png](.github/assets/image%2010.png)
 
 ## Estilando Card para mostrar información
 
@@ -815,7 +815,7 @@ const { docs: launches } = (await res.json()) as APISpaceXResponse;
 
 Estado actual de la aplicación:
 
-![image.png](./public/assets/readme/image%2011.png)
+![image.png](.github/assets/image%2011.png)
 
 ## Renderizado condicional
 
@@ -872,13 +872,13 @@ const launchStatus = success ? "Success" : "Failure"
 
 Estado actual de la aplicación:
 
-![image.png](./public/assets/readme/image%2012.png)
+![image.png](.github/assets/image%2012.png)
 
 ## 404.Astro
 
 Obviamente si hacemos click en uno de los launches las páginas todavía no funcionan:
 
-![image.png](./public/assets/readme/image%2013.png)
+![image.png](.github/assets/image%2013.png)
 
 Así que vamos a configurar una página para el error 404:
 
@@ -897,7 +897,7 @@ import Layout from '../layouts/Layout.astro';
 
 Resultado:
 
-![image.png](./public/assets/readme/image%2014.png)
+![image.png](.github/assets/image%2014.png)
 
 ## Dudas
 
@@ -1132,7 +1132,7 @@ export async function getStaticPaths() {
 
 Si entramos a una de las páginas de lanzamiento:
 
-![image.png](./public/assets/readme/image%2015.png)
+![image.png](.github/assets/image%2015.png)
 
 Pero claro, esto esta funcionando ahora en el servidor, y estamos perdiendo bastantes cosas positivas de Astro, pero funcionar funciona, y esto implica que podemos utilizar Astro para crear aplicaciones tan complicadas como queramos.
 
@@ -1273,7 +1273,7 @@ console.log('javascript')
 
 Resultado:
 
-![image.png](./public/assets/readme/image%2016.png)
+![image.png](.github/assets/image%2016.png)
 
 Pero al hacer click en los botones no hace nada, porque el `<Counter />` por defecto es estático, es decir, por defecto en Astro los componentes son estáticos. Se está renderizando simplemente de forma estática, pero no es interactivo.
 
@@ -1281,7 +1281,7 @@ Para hacerlo interactivo tenemos que indicarle una directiva con el `client`.
 
 Y ahí le decimos cómo tiene que cargar esto, que normalmente va a ser cuando sea visible.
 
-![image.png](./public/assets/readme/image%2017.png)
+![image.png](.github/assets/image%2017.png)
 
 Osea que en nuestro caso vamos a optar por `client:visible`.
 
@@ -1291,7 +1291,7 @@ Osea que en nuestro caso vamos a optar por `client:visible`.
 
 Y si ahora le damos sí que funciona:
 
-![image.png](./public/assets/readme/image%2018.png)
+![image.png](.github/assets/image%2018.png)
 
 Y esto está bien, pero no es lo más increíble.
 
