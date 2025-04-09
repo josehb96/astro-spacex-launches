@@ -100,8 +100,8 @@ Pero también nos permite definir los props usando TypeScript con un tipo de int
 ```jsx
 ---
 interface Props {
-  name: string;
-  greeting?: string;
+name: string;
+greeting?: string;
 }
 
 const { greeting = "Hello", name } = Astro.props;
@@ -125,7 +125,7 @@ En nuestra aplicación vamos a crear un prop para el Layout de forma que podamos
 import "../styles/global.css"
 
 interface Props {
-	title: string
+title: string
 }
 
 const { title } = Astro.props;
@@ -134,27 +134,27 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+</head>
+<body>
+  <slot />
+</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		background-color: black;
-		color: white;
-	}
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+}
 </style>
 ```
 
@@ -166,8 +166,8 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="SpaceX Launches">
-	<main>
-	</main>
+<main>
+</main>
 </Layout>
 
 ```
@@ -208,19 +208,19 @@ console.log('javascript')
 ---
 
 <header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
-  <div class="mx-auto text-center mb-8 lg:mb-16">
-    <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
-      SpaceX launches 🚀
-    </h2>
-    <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-      All the information about SpaceX launches
-    </p>
-  </div>
+<div class="mx-auto text-center mb-8 lg:mb-16">
+  <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+    SpaceX launches 🚀
+  </h2>
+  <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+    All the information about SpaceX launches
+  </p>
+</div>
 
-  <nav class="flex flex-col items-center justify-between w-full text-center md:flex-row">
-    <a class="text-white" href="/">Últimos lanzamientos</a>
-    <a class="text-white" href="/oldest">Los más viejos</a>
-  </nav>
+<nav class="flex flex-col items-center justify-between w-full text-center md:flex-row">
+  <a class="text-white" href="/">Últimos lanzamientos</a>
+  <a class="text-white" href="/oldest">Los más viejos</a>
+</nav>
 </header>
 ```
 
@@ -242,7 +242,7 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="SpaceX Launches">
-	La página principal
+La página principal
 </Layout>
 
 ```
@@ -255,9 +255,9 @@ import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="About the project">
-  <h1>About the project</h1>
-  
-  <p>The SpaceX launches project is a demo for the Astro course</p>
+<h1>About the project</h1>
+
+<p>The SpaceX launches project is a demo for the Astro course</p>
 </Layout>
 ```
 
@@ -269,7 +269,7 @@ import Header from "../components/Header.astro";
 import "../styles/global.css"
 
 interface Props {
-	title: string
+title: string
 }
 
 const { title } = Astro.props;
@@ -278,25 +278,25 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="bg-gray-900 min-h-screen pb-32">
-		<Header />
-		<main class="max-w-5xl px-4 m-auto">
-			<slot />
-		</main>
-	</body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+</head>
+<body class="bg-gray-900 min-h-screen pb-32">
+  <Header />
+  <main class="max-w-5xl px-4 m-auto">
+    <slot />
+  </main>
+</body>
 </html>
 
 <style is:global>
-	html{
-		color-scheme: dark light; /* Con esta propiedad indicamos que queremos usar el modo oscuro y que todos los colores se adecuen al modo oscuro */
-	}
+html{
+  color-scheme: dark light; /* Con esta propiedad indicamos que queremos usar el modo oscuro y que todos los colores se adecuen al modo oscuro */
+}
 </style>
 
 ```
@@ -320,7 +320,7 @@ Creamos un nuevo componente HeaderButton.astro
 ```jsx
 ---
 interface Props {
-  href: string;
+href: string;
 }
 
 const { href } = Astro.props;
@@ -333,9 +333,9 @@ font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center
 dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all
 duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-70
 hover:opacity-100">
-  <slot name="before" />
-  <slot />
-  <slot name="after" />
+<slot name="before" />
+<slot />
+<slot name="after" />
 </a>
 ```
 
@@ -349,75 +349,75 @@ console.log('javascript')
 ---
 
 <header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
-  <div class="mx-auto text-center mb-8 lg:mb-16">
-    <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
-      SpaceX launches 🚀
-    </h2>
-    <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-      All the information about SpaceX launches
-    </p>
-  </div>
+<div class="mx-auto text-center mb-8 lg:mb-16">
+  <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+    SpaceX launches 🚀
+  </h2>
+  <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+    All the information about SpaceX launches
+  </p>
+</div>
 
-  <nav class="flex flex-col items-center justify-between w-full text-center md:flex-row">
-    <HeaderButton href="/">
-      <svg 
-        slot="before"
-        width="24"
-        height="24"  
-        viewBox="0 0 24 24"  
-        fill="none"  
-        stroke="currentColor"  
-        stroke-width="2"  
-        stroke-linecap="round"  
-        stroke-linejoin="round"  
-      >
+<nav class="flex flex-col items-center justify-between w-full text-center md:flex-row">
+  <HeaderButton href="/">
+    <svg 
+      slot="before"
+      width="24"
+      height="24"  
+      viewBox="0 0 24 24"  
+      fill="none"  
+      stroke="currentColor"  
+      stroke-width="2"  
+      stroke-linecap="round"  
+      stroke-linejoin="round"  
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
+      <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
+      <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+    </svg>
+    Últimos lanzamientos
+  </HeaderButton>
+  <HeaderButton href="/about">
+    <!-- Con slot estamos indicando en qué posición queremos que se coloque el icono utilizando slots nombrados -->
+    <svg
+      slot="before" 
+      width="24"  
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none"  
+      stroke="currentColor"
+      stroke-width="2" 
+      stroke-linecap="round" 
+      stroke-linejoin="round"
+    >
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
-        <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
-        <path d="M15 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-      </svg>
-      Últimos lanzamientos
-    </HeaderButton>
-    <HeaderButton href="/about">
-      <!-- Con slot estamos indicando en qué posición queremos que se coloque el icono utilizando slots nombrados -->
-      <svg
-        slot="before" 
-        width="24"  
-        height="24" 
-        viewBox="0 0 24 24" 
-        fill="none"  
-        stroke="currentColor"
-        stroke-width="2" 
-        stroke-linecap="round" 
-        stroke-linejoin="round"
-      >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-          <path d="M12 9h.01" />
-          <path d="M11 12h1v4h1" />
-      </svg>
-      Sobre el proyecto
-    </HeaderButton>
-    <HeaderButton href="/oldest">
-      <svg 
-        slot="before"
-        width="24"
-        height="24"  
-        viewBox="0 0 24 24"  
-        fill="none"  
-        stroke="currentColor"  
-        stroke-width="2"  
-        stroke-linecap="round"  
-        stroke-linejoin="round"  
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <path d="M20.984 12.535a9 9 0 1 0 -8.431 8.448" />
-        <path d="M12 7v5l3 3" /><path d="M19 16v6" />
-        <path d="M22 19l-3 3l-3 -3" />
-      </svg>
-      Los más viejos
-    </HeaderButton>
-  </nav>
+        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+        <path d="M12 9h.01" />
+        <path d="M11 12h1v4h1" />
+    </svg>
+    Sobre el proyecto
+  </HeaderButton>
+  <HeaderButton href="/oldest">
+    <svg 
+      slot="before"
+      width="24"
+      height="24"  
+      viewBox="0 0 24 24"  
+      fill="none"  
+      stroke="currentColor"  
+      stroke-width="2"  
+      stroke-linecap="round"  
+      stroke-linejoin="round"  
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M20.984 12.535a9 9 0 1 0 -8.431 8.448" />
+      <path d="M12 7v5l3 3" /><path d="M19 16v6" />
+      <path d="M22 19l-3 3l-3 -3" />
+    </svg>
+    Los más viejos
+  </HeaderButton>
+</nav>
 </header>
 ```
 
@@ -434,9 +434,9 @@ font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center
 dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all
 duration-200 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-70
 hover:opacity-100">
-  <slot name="before" />
-  <slot>Un texto por defecto</slot>
-  <slot name="after" />
+<slot name="before" />
+<slot>Un texto por defecto</slot>
+<slot name="after" />
 </a>
 ```
 
@@ -448,12 +448,8 @@ Resultado:
 
 ![image.png](.github/assets/image%207.png)
 
-<aside>
-💡
-
-Esto del contenido por defecto, se puede hacer tanto para los slots nombrados como para los normales.
-
-</aside>
+> [!Note]
+> Esto del contenido por defecto, se puede hacer tanto para los slots nombrados como para los normales.
 
 ## Markdown (.md)
 
@@ -463,8 +459,8 @@ En los archivos Markdown se puede usar una cosa llamada front matter que nos per
 
 ```markdown
 ---
-  title: 'Contenido de la página'
-  layout: "../layouts/Layout.astro"
+title: 'Contenido de la página'
+layout: "../layouts/Layout.astro"
 ---
 
 # Esto es un ejemplo de artículo
@@ -479,7 +475,7 @@ lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ```javascript
 function () {
-    console.log('Hola mundo');
+  console.log('Hola mundo');
 }
 ```
 ```
@@ -498,7 +494,7 @@ Cremos un archivo ejemplo.html dentro del directorio pages:
 
 ```markdown
 <h1>
-  Un ejemplo de html 
+Un ejemplo de html 
 </h1>
 ```
 
@@ -508,29 +504,25 @@ Cremos un archivo ejemplo.html dentro del directorio pages:
 
 Vamos a crear un nuevo componente para los launches y de paso vamos a ver cómo hacemos fetching de datos.
 
-<aside>
-💡
-
-Astro no ejecuta nada de JavaScript en la parte del cliente, lo hace en la parte del servidor o en tiempo de compilación.
-
-</aside>
+> [!Important]
+> Astro no ejecuta nada de JavaScript en la parte del cliente, lo hace en la parte del servidor o en tiempo de compilación.
 
 ```jsx
 ---
 const res = await fetch('https://api.spacexdata.com/v5/launches/query', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    query: {},
-    options: {
-      sort: {
-          date_unix: "asc", // Ordenar por fecha de forma ascendente (date_unix es un campo del json devuelto)
-      },
-      limit: 12,
+method: 'POST',
+headers: {
+  'Content-Type': 'application/json',
+},
+body: JSON.stringify({
+  query: {},
+  options: {
+    sort: {
+        date_unix: "asc", // Ordenar por fecha de forma ascendente (date_unix es un campo del json devuelto)
     },
-  }),
+    limit: 12,
+  },
+}),
 });
 
 const data = await res.json();
@@ -539,9 +531,9 @@ console.log(data);
 ---
 
 <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-  <article>
-    
-  </article>
+<article>
+  
+</article>
 </div>
 ```
 
@@ -557,115 +549,115 @@ Nos copiamos el código haciendo click en “Copy Code” y lo pasamos a un nuev
 
 ```tsx
 export type APISpaceXResponse = {
-    docs:          Doc[];
-    totalDocs:     number;
-    offset:        number;
-    limit:         number;
-    totalPages:    number;
-    page:          number;
-    pagingCounter: number;
-    hasPrevPage:   boolean;
-    hasNextPage:   boolean;
-    prevPage:      null;
-    nextPage:      number;
+  docs:          Doc[];
+  totalDocs:     number;
+  offset:        number;
+  limit:         number;
+  totalPages:    number;
+  page:          number;
+  pagingCounter: number;
+  hasPrevPage:   boolean;
+  hasNextPage:   boolean;
+  prevPage:      null;
+  nextPage:      number;
 }
 
 export type Doc = {
-    fairings:              Fairings | null;
-    links:                 Links;
-    static_fire_date_utc:  Date | null;
-    static_fire_date_unix: number | null;
-    net:                   boolean;
-    window:                number;
-    rocket:                Rocket;
-    success:               boolean;
-    failures:              Failure[];
-    details:               null | string;
-    crew:                  any[];
-    ships:                 string[];
-    capsules:              string[];
-    payloads:              string[];
-    launchpad:             Launchpad;
-    flight_number:         number;
-    name:                  string;
-    date_utc:              Date;
-    date_unix:             number;
-    date_local:            Date;
-    date_precision:        DatePrecision;
-    upcoming:              boolean;
-    cores:                 Core[];
-    auto_update:           boolean;
-    tbd:                   boolean;
-    launch_library_id:     null;
-    id:                    string;
+  fairings:              Fairings | null;
+  links:                 Links;
+  static_fire_date_utc:  Date | null;
+  static_fire_date_unix: number | null;
+  net:                   boolean;
+  window:                number;
+  rocket:                Rocket;
+  success:               boolean;
+  failures:              Failure[];
+  details:               null | string;
+  crew:                  any[];
+  ships:                 string[];
+  capsules:              string[];
+  payloads:              string[];
+  launchpad:             Launchpad;
+  flight_number:         number;
+  name:                  string;
+  date_utc:              Date;
+  date_unix:             number;
+  date_local:            Date;
+  date_precision:        DatePrecision;
+  upcoming:              boolean;
+  cores:                 Core[];
+  auto_update:           boolean;
+  tbd:                   boolean;
+  launch_library_id:     null;
+  id:                    string;
 }
 
 export type Core = {
-    core:            string;
-    flight:          number;
-    gridfins:        boolean;
-    legs:            boolean;
-    reused:          boolean;
-    landing_attempt: boolean;
-    landing_success: boolean | null;
-    landing_type:    null | string;
-    landpad:         null;
+  core:            string;
+  flight:          number;
+  gridfins:        boolean;
+  legs:            boolean;
+  reused:          boolean;
+  landing_attempt: boolean;
+  landing_success: boolean | null;
+  landing_type:    null | string;
+  landpad:         null;
 }
 
 export enum DatePrecision {
-    Hour = "hour",
+  Hour = "hour",
 }
 
 export type Failure = {
-    time:     number;
-    altitude: number | null;
-    reason:   string;
+  time:     number;
+  altitude: number | null;
+  reason:   string;
 }
 
 export type Fairings = {
-    reused:           boolean | null;
-    recovery_attempt: boolean | null;
-    recovered:        boolean | null;
-    ships:            any[];
+  reused:           boolean | null;
+  recovery_attempt: boolean | null;
+  recovered:        boolean | null;
+  ships:            any[];
 }
 
 export enum Launchpad {
-    The5E9E4501F509094Ba4566F84 = "5e9e4501f509094ba4566f84",
-    The5E9E4502F509092B78566F87 = "5e9e4502f509092b78566f87",
-    The5E9E4502F5090995De566F86 = "5e9e4502f5090995de566f86",
+  The5E9E4501F509094Ba4566F84 = "5e9e4501f509094ba4566f84",
+  The5E9E4502F509092B78566F87 = "5e9e4502f509092b78566f87",
+  The5E9E4502F5090995De566F86 = "5e9e4502f5090995de566f86",
 }
 
 export type Links = {
-    patch:      Patch;
-    reddit:     Reddit;
-    flickr:     Flickr;
-    presskit:   null | string;
-    webcast:    string;
-    youtube_id: string;
-    article:    string;
-    wikipedia:  string;
+  patch:      Patch;
+  reddit:     Reddit;
+  flickr:     Flickr;
+  presskit:   null | string;
+  webcast:    string;
+  youtube_id: string;
+  article:    string;
+  wikipedia:  string;
 }
 
 export type Flickr = {
-    small:    any[];
-    original: any[];
+  small:    any[];
+  original: any[];
 }
 
 export type Patch = {
-    small: string;
-    large: string;
+  small: string;
+  large: string;
 }
 
 export type Reddit = {
-    campaign: null;
-    launch:   null | string;
-    media:    null;
-    recovery: null;
+  campaign: null;
+  launch:   null | string;
+  media:    null;
+  recovery: null;
 }
 
 export enum Rocket {
-    The5E9D0D95Eda69955F709D1Eb = "5e9d0d95eda69955f709d1eb",
-    The5E9D0D95Eda69973A809D1Ec = "5e9d0d95eda69973a809d1ec",
+  The5E9D0D95Eda69955F709D1Eb = "5e9d0d95eda69955f709d1eb",
+  The5E9D0D95Eda69973A809D1Ec = "5e9d0d95eda69973a809d1ec",
 }
 
 ```
@@ -679,12 +671,12 @@ CardLaunch.astro
 ```jsx
 ---
 interface Props {
-  id: string
-  name: string
-  img: string
-  success: boolean
-  flightNumber: number
-  details: string
+id: string
+name: string
+img: string
+success: boolean
+flightNumber: number
+details: string
 }
 
 const { success, flightNumber, img, id, details } = Astro.props
@@ -692,26 +684,26 @@ const successText = success ? "Éxito" : "Fracaso"
 ---
 
 <a href={`/launch/${id}`}
-  class="rounded-lg border shadow-md bg-gray-800 border-gray-700
-  hover:scale-105 hover:bg-gray-700 hover:border-gray-500 transition flex flex-col"
+class="rounded-lg border shadow-md bg-gray-800 border-gray-700
+hover:scale-105 hover:bg-gray-700 hover:border-gray-500 transition flex flex-col"
 >
-  <picture class="flex justify-center p-4">
-    <img src={img} alt={`Patch for launch ${id}`} class="rounded-lg mb-5" />
-  </picture>
+<picture class="flex justify-center p-4">
+  <img src={img} alt={`Patch for launch ${id}`} class="rounded-lg mb-5" />
+</picture>
 
-  <header class="p-4 flex-grow">
-    <span class={`text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ${success ? "bg-green-200 text-green-900" : "bg-red-200 text-red-900"}`}>
-      {successText}
-    </span>
+<header class="p-4 flex-grow">
+  <span class={`text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ${success ? "bg-green-200 text-green-900" : "bg-red-200 text-red-900"}`}>
+    {successText}
+  </span>
 
-    <h2 class="my-2 text-2xl font-bold tracking-tight text-white">
-      Flight #{flightNumber}
-    </h2>
+  <h2 class="my-2 text-2xl font-bold tracking-tight text-white">
+    Flight #{flightNumber}
+  </h2>
 
-    <p class="mb-4 font-light text-gray-400">
-      {details?.length > 100 ? details.slice(0, 100) + "..." : details}
-    </p>
-  </header>
+  <p class="mb-4 font-light text-gray-400">
+    {details?.length > 100 ? details.slice(0, 100) + "..." : details}
+  </p>
+</header>
 </a>
 ```
 
@@ -722,33 +714,33 @@ Recorremos el array de lanzamientos y mostramos la imagen y el título de cada u
 import { type APISpaceXResponse } from "../types/api";
 
 const res = await fetch('https://api.spacexdata.com/v5/launches/query', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    query: {},
-    options: {
-      sort: {
-          date_unix: "asc", // Ordenar por fecha de forma ascendente (date_unix es un campo del json devuelto)
-      },
-      limit: 12,
+method: 'POST',
+headers: {
+  'Content-Type': 'application/json',
+},
+body: JSON.stringify({
+  query: {},
+  options: {
+    sort: {
+        date_unix: "asc", // Ordenar por fecha de forma ascendente (date_unix es un campo del json devuelto)
     },
-  }),
+    limit: 12,
+  },
+}),
 });
 
 const { docs: launches } = (await res.json()) as APISpaceXResponse;
 ---
 
 <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-  {
-    launches.map((launch) => (
-      <article>
-        <img src={launch.links.patch.small} alt="" />
-        <h2>Launch #{launch.id}</h2>
-      </article>
-    ))
-  }
+{
+  launches.map((launch) => (
+    <article>
+      <img src={launch.links.patch.small} alt="" />
+      <h2>Launch #{launch.id}</h2>
+    </article>
+  ))
+}
 </div>
 ```
 
@@ -763,11 +755,11 @@ CardLaunch.astro
 ```jsx
 ---
 interface Props {
-  id: string
-  details: string | null
-  img: string
-  success: boolean
-  flightNumber: number
+id: string
+details: string | null
+img: string
+success: boolean
+flightNumber: number
 }
 
 const { success, flightNumber, img, id, details } = Astro.props
@@ -775,26 +767,26 @@ const successText = success ? "Éxito" : "Fracaso"
 ---
 
 <a href={`/launch/${id}`}
-  class="rounded-lg border shadow-md bg-gray-800 border-gray-700
-  hover:scale-105 hover:bg-gray-700 hover:border-gray-500 transition flex flex-col"
+class="rounded-lg border shadow-md bg-gray-800 border-gray-700
+hover:scale-105 hover:bg-gray-700 hover:border-gray-500 transition flex flex-col"
 >
-  <picture class="flex justify-center p-4">
-    <img src={img} alt={`Patch for launch ${id}`} class="rounded-lg mb-5" />
-  </picture>
+<picture class="flex justify-center p-4">
+  <img src={img} alt={`Patch for launch ${id}`} class="rounded-lg mb-5" />
+</picture>
 
-  <header class="p-4 flex-grow">
-    <span class={`text-xs font-semibold mr-2 px-2.5 py-0.5 rounded`}>
-      Por hacer
-    </span>
+<header class="p-4 flex-grow">
+  <span class={`text-xs font-semibold mr-2 px-2.5 py-0.5 rounded`}>
+    Por hacer
+  </span>
 
-    <h2 class="my-2 text-2xl font-bold tracking-tight text-white">
-      Flight #{flightNumber}
-    </h2>
+  <h2 class="my-2 text-2xl font-bold tracking-tight text-white">
+    Flight #{flightNumber}
+  </h2>
 
-    <p class="mb-4 font-light text-gray-400">
-      {details != null && details?.length > 100 ? details.slice(0, 100) + "..." : details}
-    </p>
-  </header>
+  <p class="mb-4 font-light text-gray-400">
+    {details != null && details?.length > 100 ? details.slice(0, 100) + "..." : details}
+  </p>
+</header>
 </a>
 ```
 
@@ -806,38 +798,38 @@ import { type APISpaceXResponse } from "../types/api";
 import CardLaunch from "../components/CardLaunch.astro";
 
 const res = await fetch('https://api.spacexdata.com/v5/launches/query', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    query: {},
-    options: {
-      sort: {
-          date_unix: "asc", // Ordenar por fecha de forma ascendente (date_unix es un campo del json devuelto)
-      },
-      limit: 12,
+method: 'POST',
+headers: {
+  'Content-Type': 'application/json',
+},
+body: JSON.stringify({
+  query: {},
+  options: {
+    sort: {
+        date_unix: "asc", // Ordenar por fecha de forma ascendente (date_unix es un campo del json devuelto)
     },
-  }),
+    limit: 12,
+  },
+}),
 });
 
 const { docs: launches } = (await res.json()) as APISpaceXResponse;
 ---
 
 <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-  {
-    launches.map(
-      ({id, links, details, flight_number: flightNumber, success}) => (
-        <CardLaunch
-          id={id}
-          img={links.patch.small}
-          details={details}
-          flightNumber={flightNumber}
-          success={success}
-        />
-      ) 
-    )
-  }
+{
+  launches.map(
+    ({id, links, details, flight_number: flightNumber, success}) => (
+      <CardLaunch
+        id={id}
+        img={links.patch.small}
+        details={details}
+        flightNumber={flightNumber}
+        success={success}
+      />
+    ) 
+  )
+}
 </div>
 ```
 
@@ -856,11 +848,11 @@ CardLaunch.astro
 ```jsx
 ---
 interface Props {
-  id: string
-  details: string | null
-  img: string
-  success: boolean
-  flightNumber: number
+id: string
+details: string | null
+img: string
+success: boolean
+flightNumber: number
 }
 
 const { success, flightNumber, img, id, details } = Astro.props
@@ -868,33 +860,33 @@ const launchStatus = success ? "Success" : "Failure"
 ---
 
 <a href={`/launch/${id}`}
-  class="rounded-lg border shadow-md bg-gray-800 border-gray-700
-  hover:scale-105 hover:bg-gray-700 hover:border-gray-500 transition flex flex-col"
+class="rounded-lg border shadow-md bg-gray-800 border-gray-700
+hover:scale-105 hover:bg-gray-700 hover:border-gray-500 transition flex flex-col"
 >
-  <picture class="flex justify-center p-4">
-    <img src={img} alt={`Patch for launch ${id}`} class="rounded-lg mb-5" />
-  </picture>
+<picture class="flex justify-center p-4">
+  <img src={img} alt={`Patch for launch ${id}`} class="rounded-lg mb-5" />
+</picture>
 
-  <header class="p-4 flex-grow">
-    <span
-      class:list={[
-        "text-xs font-semibold mr-2 px-2.5 py-0.5 rounded",
-        {
-          "bg-green-400 text-green-900": success,
-          "bg-red-400 text-red-900": !success
-        }
-      ]}
-      >{launchStatus}
-    </span>
+<header class="p-4 flex-grow">
+  <span
+    class:list={[
+      "text-xs font-semibold mr-2 px-2.5 py-0.5 rounded",
+      {
+        "bg-green-400 text-green-900": success,
+        "bg-red-400 text-red-900": !success
+      }
+    ]}
+    >{launchStatus}
+  </span>
 
-    <h2 class="my-2 text-2xl font-bold tracking-tight text-white">
-      Flight #{flightNumber}
-    </h2>
+  <h2 class="my-2 text-2xl font-bold tracking-tight text-white">
+    Flight #{flightNumber}
+  </h2>
 
-    <p class="mb-4 font-light text-gray-400">
-      {details != null && details?.length > 100 ? details.slice(0, 100) + "..." : details}
-    </p>
-  </header>
+  <p class="mb-4 font-light text-gray-400">
+    {details != null && details?.length > 100 ? details.slice(0, 100) + "..." : details}
+  </p>
+</header>
 </a>
 ```
 
@@ -916,10 +908,10 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="404 Not Found">
-  <div class="flex flex-col justify-center items-center">
-    <h1 class="text-white text-3xl text-center">Esta página no existe...</h1>
-    <img src="https://midu.dev/images/this-is-fine-404.gif" alt="404 Image" />
-  </div>
+<div class="flex flex-col justify-center items-center">
+  <h1 class="text-white text-3xl text-center">Esta página no existe...</h1>
+  <img src="https://midu.dev/images/this-is-fine-404.gif" alt="404 Image" />
+</div>
 </Layout>
 ```
 
@@ -955,31 +947,31 @@ spacex.ts
 import { type Doc, type APISpaceXResponse } from "../types/api";
 
 export const getLaunchById = async ({id}: {id: string}) => {
-  const res = await fetch(`https://api.spacexdata.com/v5/launches/${id}`) 
-  
-  const launch = (await res.json()) as Doc;
-  return launch
+const res = await fetch(`https://api.spacexdata.com/v5/launches/${id}`) 
+
+const launch = (await res.json()) as Doc;
+return launch
 } 
 
 export const getLatestLaunches = async () => {
-  const res = await fetch('https://api.spacexdata.com/v5/launches/query', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      query: {},
-      options: {
-        sort: {
-            date_unix: "asc", // Ordenar por fecha de forma ascendente (date_unix es un campo del json devuelto)
-        },
-        limit: 12,
+const res = await fetch('https://api.spacexdata.com/v5/launches/query', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    query: {},
+    options: {
+      sort: {
+          date_unix: "asc", // Ordenar por fecha de forma ascendente (date_unix es un campo del json devuelto)
       },
-    }),
-  });
-  
-  const { docs: launches } = (await res.json()) as APISpaceXResponse;
-  return launches
+      limit: 12,
+    },
+  }),
+});
+
+const { docs: launches } = (await res.json()) as APISpaceXResponse;
+return launches
 } 
 ```
 
@@ -994,19 +986,19 @@ const launches = await getLatestLaunches();
 ---
 
 <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-  {
-    launches.map(
-      ({id, links, details, flight_number: flightNumber, success}) => (
-        <CardLaunch
-          id={id}
-          img={links.patch.small}
-          details={details}
-          flightNumber={flightNumber}
-          success={success}
-        />
-      ) 
-    )
-  }
+{
+  launches.map(
+    ({id, links, details, flight_number: flightNumber, success}) => (
+      <CardLaunch
+        id={id}
+        img={links.patch.small}
+        details={details}
+        flightNumber={flightNumber}
+        success={success}
+      />
+    ) 
+  )
+}
 </div>
 ```
 
@@ -1023,31 +1015,31 @@ const { id } = Astro.params
 
 /*
 if (!id) { // solo para el servidor
-  Astro.redirect("/")
+Astro.redirect("/")
 }
 */
 
 let launch = null
 if (id) {
-  launch = await getLaunchById({ id })
+launch = await getLaunchById({ id })
 }
 
 export async function getStaticPaths() {
-  // llamar a una API externa para saber todas las ids que debes generar
+// llamar a una API externa para saber todas las ids que debes generar
 
-  const launches = await getLatestLaunches()
+const launches = await getLatestLaunches()
 
-  return launches.map(launch => ({
-    params: { id: launch.id }
-  }))
+return launches.map(launch => ({
+  params: { id: launch.id }
+}))
 }
 
 ---
 
 <Layout title={`Lanzamiento ${id}`}>
-  <article>
-    {launch?.id}
-  </article>
+<article>
+  {launch?.id}
+</article>
 </Layout>
 ```
 
@@ -1065,20 +1057,12 @@ Puesto que esta sería la forma estática. Pero Astro también puede funcionar e
 
 ## Páginas dinámicas (forma SSR)
 
-<aside>
-💡
-
-**Removed: `hybrid` rendering mode**
-
-In Astro v4.x, Astro provided three rendering `output` rendering modes: `'static'`, `'hybrid'`, and `'server'`
-
-Astro v5.0 merges the `output: 'hybrid'` and `output: 'static'` configurations into one single configuration (now called `'static'`) that works the same way as the previous hybrid option.
-
-It is no longer necessary to specify `output: 'hybrid'` in your Astro config to use server-rendered pages. The new `output: 'static'` has this capability included.
-
-Astro will now automatically allow you to opt out of prerendering in your static site with no change to your output configuration required. Any page route or endpoint can include `export const prerender = false` to be server-rendered on demand, while the rest of your site is statically generated.
-
-</aside>
+> [!Caution]
+> **Removed: `hybrid` rendering mode**<br>
+> In Astro v4.x, Astro provided three rendering `output` rendering modes: `'static'`, `'hybrid'`, and `'server'`.<br>
+> Astro v5.0 merges the `output: 'hybrid'` and `output: 'static'` configurations into one single configuration (now called `'static'`) that works the same way as the previous hybrid option.<br>
+> It is no longer necessary to specify `output: 'hybrid'` in your Astro config to use server-rendered pages. The new `output: 'static'` has this capability included.<br>
+> Astro will now automatically allow you to opt out of prerendering in your static site with no change to your output configuration required. Any page route or endpoint can include `export const prerender = false` to be server-rendered on demand, while the rest of your site is statically generated.
 
 Como hemos dicho no es obligatorio funcionar siempre de forma estática con Astro.
 
@@ -1106,10 +1090,10 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()]
-  },
-  output: 'server'
+vite: {
+  plugins: [tailwindcss()]
+},
+output: 'server'
 });
 ```
 
@@ -1125,36 +1109,36 @@ const { id } = Astro.params
 
 /*
 if (!id) { // solo para el servidor
-  Astro.redirect("/")
+Astro.redirect("/")
 }
 */
 
 let launch = null
 if (id) {
-  launch = await getLaunchById({ id })
+launch = await getLaunchById({ id })
 }
 
 /*
 export async function getStaticPaths() {
-  // llamar a una API externa para saber todas las ids que debes generar
+// llamar a una API externa para saber todas las ids que debes generar
 
-  const launches = await getLatestLaunches()
+const launches = await getLatestLaunches()
 
-  return launches.map(launch => ({
-    params: { id: launch.id }
-  }))
+return launches.map(launch => ({
+  params: { id: launch.id }
+}))
 }
 */
 ---
 
 <Layout title={`Lanzamiento ${id}`}>
-  <article class="flex flex-col gap-y-4">
-    <img class="w-52 h-auto" src={launch?.links?.patch.small} alt={launch?.name} />
-    <h2 class="text-4xl text-white font-bold">
-      Launch #{launch?.flight_number}
-    </h2>
-    <p class="text-lg">{launch?.details}</p>
-  </article>
+<article class="flex flex-col gap-y-4">
+  <img class="w-52 h-auto" src={launch?.links?.patch.small} alt={launch?.name} />
+  <h2 class="text-4xl text-white font-bold">
+    Launch #{launch?.flight_number}
+  </h2>
+  <p class="text-lg">{launch?.details}</p>
+</article>
 </Layout>
 ```
 
@@ -1178,9 +1162,9 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()]
-  }
+vite: {
+  plugins: [tailwindcss()]
+}
 });
 ```
 
@@ -1195,34 +1179,34 @@ const { id } = Astro.params
 
 /*
 if (!id) { // solo para el servidor
-  Astro.redirect("/")
+Astro.redirect("/")
 }
 */
 
 let launch = null
 if (id) {
-  launch = await getLaunchById({ id })
+launch = await getLaunchById({ id })
 }
 
 export async function getStaticPaths() {
-  // llamar a una API externa para saber todas las ids que debes generar
+// llamar a una API externa para saber todas las ids que debes generar
 
-  const launches = await getLatestLaunches()
+const launches = await getLatestLaunches()
 
-  return launches.map(launch => ({
-    params: { id: launch.id }
-  }))
+return launches.map(launch => ({
+  params: { id: launch.id }
+}))
 }
 ---
 
 <Layout title={`Lanzamiento ${id}`}>
-  <article class="flex flex-col gap-y-4">
-    <img class="w-52 h-auto" src={launch?.links?.patch.small} alt={launch?.name} />
-    <h2 class="text-4xl text-white font-bold">
-      Launch #{launch?.flight_number}
-    </h2>
-    <p class="text-lg">{launch?.details}</p>
-  </article>
+<article class="flex flex-col gap-y-4">
+  <img class="w-52 h-auto" src={launch?.links?.patch.small} alt={launch?.name} />
+  <h2 class="text-4xl text-white font-bold">
+    Launch #{launch?.flight_number}
+  </h2>
+  <p class="text-lg">{launch?.details}</p>
+</article>
 </Layout>
 ```
 
@@ -1253,21 +1237,21 @@ import { ref } from 'vue';
 const count = ref(0);
 
 function increment() {
-  count.value++;
+count.value++;
 }
 
 function decrement() {
-  count.value--;
+count.value--;
 }
 
 </script>
 
 <template>
-  <div>
-    <p>{{ count }}</p>
-    <button class="border px-4 py-2 text-xl" @click="increment">+</button>
-    <button class="border px-4 py-2 text-xl" @click="decrement">-</button>
-  </div>
+<div>
+  <p>{{ count }}</p>
+  <button class="border px-4 py-2 text-xl" @click="increment">+</button>
+  <button class="border px-4 py-2 text-xl" @click="decrement">-</button>
+</div>
 </template>
 ```
 
@@ -1282,21 +1266,21 @@ console.log('javascript')
 ---
 
 <header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
-  <div class="mx-auto text-center mb-8 lg:mb-16">
-    <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
-      SpaceX launches 🚀
-    </h2>
-    <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-      All the information about SpaceX launches
-    </p>
-  </div>
+<div class="mx-auto text-center mb-8 lg:mb-16">
+  <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+    SpaceX launches 🚀
+  </h2>
+  <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+    All the information about SpaceX launches
+  </p>
+</div>
 
-  <Counter />
+<Counter />
 
-  <nav class="flex flex-col items-center justify-between w-full text-center md:flex-row">
-    <HeaderButton href="/">
-      <svg 
-      el resto del código...........
+<nav class="flex flex-col items-center justify-between w-full text-center md:flex-row">
+  <HeaderButton href="/">
+    <svg 
+    el resto del código...........
 ```
 
 Resultado:
@@ -1314,7 +1298,7 @@ Y ahí le decimos cómo tiene que cargar esto, que normalmente va a ser cuando s
 Osea que en nuestro caso vamos a optar por `client:visible`.
 
 ```jsx
-  <Counter client:visible/>
+<Counter client:visible/>
 ```
 
 Y si ahora le damos sí que funciona:
@@ -1338,28 +1322,28 @@ console.log('javascript')
 ---
 
 <header transition:persist class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
-  <div class="mx-auto text-center mb-8 lg:mb-16">
-    <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
-      SpaceX launches 🚀
-    </h2>
-    <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-      All the information about SpaceX launches
-    </p>
-  </div>
+<div class="mx-auto text-center mb-8 lg:mb-16">
+  <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+    SpaceX launches 🚀
+  </h2>
+  <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+    All the information about SpaceX launches
+  </p>
+</div>
 
-  <Counter client:visible/>
+<Counter client:visible/>
 
 ```
 
 Con el `transition:persist` lo que le estamos diciendo es que todo lo que envuelve a este header, (lo podemos poner a nivel de componente):
 
 ```jsx
-  <Counter transition:persist client:visible/>
+<Counter transition:persist client:visible/>
 ```
 
 Lo que le podemos decir es que para este componente que tiene este estado, cuando tú hagas la navegación a otro sitio, quiero que persistas el estado y que lo dejes tal y como estaba.
 
- 
+
 
 Lo que podemos conseguir con esto es crear experiencias de usuario como por ejemplo un vídeo, un reproductor de música, un formulario que tenga medias, lo que sea, que tú persistes el estado mientras va navegando entre diferentes páginas. Y esto lo hemos hecho con sólo una directiva.
 
@@ -1367,5 +1351,5 @@ Esto lo podemos hacer a nivel de componente o a nivel de cualquier cosa que tene
 
 A nivel interno Astro lo que hace es detectar cuáles son las partes que tiene que persistir el estado del HTML.
 
-[!WARNING] 
-Si se recarga la página se pierde el estado. Es para persistir entre animaciones y navegaciones, no para persistir. Si hacemos un refresco eso no se guarda en localStorage.
+> [!WARNING] 
+> Si se recarga la página se pierde el estado. Es para persistir entre animaciones y navegaciones, no para persistir. Si hacemos un refresco eso no se guarda en localStorage.
