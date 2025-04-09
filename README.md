@@ -1184,7 +1184,7 @@ export default defineConfig({
 });
 ```
 
-[id].astro
+**[id].astro**
 
 ```jsx
 ---
@@ -1244,7 +1244,7 @@ Imaginemos que por lo que sea en nuestro Header queremos tener una parte que sea
 
 Creamos un componente vue con un contador:
 
-Counter.vue
+**Counter.vue**
 
 ```jsx
 <script lang="ts" setup>
@@ -1367,9 +1367,5 @@ Esto lo podemos hacer a nivel de componente o a nivel de cualquier cosa que tene
 
 A nivel interno Astro lo que hace es detectar cuáles son las partes que tiene que persistir el estado del HTML.
 
-<aside>
-💡
-
+[!WARNING] 
 Si se recarga la página se pierde el estado. Es para persistir entre animaciones y navegaciones, no para persistir. Si hacemos un refresco eso no se guarda en localStorage.
-
-</aside>
