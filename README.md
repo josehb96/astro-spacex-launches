@@ -55,7 +55,7 @@ Aunque no es obligatorio usar ninguna biblioteca de UI.
 
 ## Plantillas
 
-Existen un montón de plantillas ya preparadas en la web de Astro, 
+Existen un montón de plantillas ya preparadas en la web de Astro. 
 
 ## Estructura de carpetas
 
