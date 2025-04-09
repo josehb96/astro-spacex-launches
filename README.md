@@ -63,11 +63,11 @@ Existen un montón de plantillas ya preparadas en la web de Astro.
 
 ## Sintaxis
 
-En Astro el bloque encerrado con - - - es donde podemos escribir JavaScript.
+En Astro el bloque encerrado con - - - es donde podemos escribir JavaScript`
 
 Es decir, ahí haremos los imports de los componentes, fetching de datos, decir las props…
 
-Otra cosa interesante de Astro es que los estilos que declaramos dentro de <style> tienen scope, es decir, están siendo utilizados únicamente sobre el propio componente.
+Otra cosa interesante de Astro es que los estilos que declaramos dentro de `<style>` tienen scope, es decir, están siendo utilizados únicamente sobre el propio componente.
 
 ## Props
 
@@ -174,11 +174,11 @@ import Layout from '../layouts/Layout.astro';
 
 ## CSS Directivas
 
-En Astro podemos hacer estilos globales, con <style is:global>.
+En Astro podemos hacer estilos globales, con `<style is:global>`.
 
-Con <style is:inline> dejaríamos el estilo en el HTML para no procesarlo.
+Con `<style is:inline>` dejaríamos el estilo en el HTML para no procesarlo.
 
-Pero con <style> lo estaríamos procesando y haciendo que sólo funcione en el propio componente.
+Pero con `<style>` lo estaríamos procesando y haciendo que sólo funcione en el propio componente.
 
 ## Componentes y npm run dev
 
