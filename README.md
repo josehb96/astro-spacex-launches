@@ -1,4 +1,4 @@
-# Astro SpaceX Launches 
+# Astro SpaceX Launches 🚀
 
 ## Intro + ¿Qué es Astro?
 
