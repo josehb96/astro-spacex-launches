@@ -1,5 +1,47 @@
 # Astro SpaceX Launches 🚀
 
+# Índice
+
+1. [Intro + ¿Qué es Astro?](#intro--qué-es-astro)
+2. [Magia de Astro](#magia-de-astro)
+  - Arquitectura de islas
+  - No JavaScript por defecto
+3. [Agnóstico al Framework](#agnóstico-al-framework)
+4. [Plantillas](#plantillas)
+5. [Estructura de carpetas](#estructura-de-carpetas)
+6. [Sintaxis](#sintaxis)
+  - Bloque JavaScript
+  - Estilos con scope
+7. [Props](#props)
+  - Definición básica
+  - TypeScript interface
+  - Valores por defecto
+8. [CSS Directivas](#css-directivas)
+  - is:global
+  - is:inline
+9. [Componentes y npm run dev](#componentes-y-npm-run-dev)
+10. [Dist: Despliegue a producción](#dist-despligue-a-producción)
+11. [Sistema de Integración](#sistema-de-integración)
+12. [Primer componente](#primer-componente)
+13. [Enrutamiento de páginas / Layout](#enrutamiento-de-páginas--layout)
+14. [Slots](#slots-nombrados-text-by-default)
+    - Slots nombrados
+    - Contenido por defecto
+15. [Markdown (.md)](#markdown-md)
+16. [Usar HTML](#usar-html)
+17. [Fetching de Datos / Iteración de elementos](#fetching-de-datos--iteración-de-elementos)
+18. [Tipos en TypeScript](#tipos-en-typescript)
+19. [Estilando Card para mostrar información](#estilando-card-para-mostrar-información)
+20. [Renderizado condicional](#renderizado-condicional)
+21. [404.Astro](#404astro)
+22. [Páginas dinámicas](#páginas-dinámicas-getstaticpaths)
+    - getStaticPaths
+    - SSR
+    - Modo híbrido
+23. [View Transitions](#view-transitions-introducción)
+24. [Componentes Interactivos](#componentes-interactivos-las-islas)
+25. [Persistencia de información](#persistencia-de-información)
+
 ## Intro + ¿Qué es Astro?
 
 Astro es un framework web **para crear todo tipo de webs**.
@@ -158,7 +200,7 @@ Una de las cosas buenas que tiene Astro es que no tiene casi boilerplate, es dec
 
 Obviamente Astro ya tiene todo lo que sería fast refresh, hot mode replacement, por lo que guardas y ya ves directamente los cambios.
 
-## Dist: Despligue a producción
+## Dist: Despliegue a producción
 
 Si hacemos npm run build y accedemos al directorio generado dist, veremos que no hay ningún archivo de JavaScript, ya que como hemos comentado anteriormente por defecto no utiliza JavaScript.
 
