@@ -1,6 +1,6 @@
 # Astro SpaceX Launches 🚀
 
-# Índice
+## Índice
 
 1. [Intro + ¿Qué es Astro?](#intro--qué-es-astro)
 2. [Magia de Astro](#magia-de-astro)
